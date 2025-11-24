@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
 
-            //Console.Write("Input number: ");
-            //int num = int.Parse(Console.ReadLine());
+            Console.Write("Input number: ");
+            int num = int.Parse(Console.ReadLine());
 
             //var oddNumbers = GetListOddNumbers(num);
 
@@ -19,7 +19,7 @@
             //    Console.WriteLine(string.Join("", row));
             //}
 
-            //Console.WriteLine(GetStringOddNumbers(num));
+            Console.WriteLine(GetStringOddNumbers(num));
 
             //Console.WriteLine(GetEmptySquare(num));
 
@@ -35,10 +35,10 @@
         }
 
         /// <summary>
-        /// 
+        /// Возвращает строку, содержащую все нечетные числа от 1 до указанного числа
         /// </summary>
-        /// <param name="num"></param>
-        /// <returns></returns>
+        /// <param name="num">Верхняя граница диапазона</param>
+        /// <returns>Строка из нечетных чисел, разделенных запятой</returns>
         static string GetStringOddNumbers(int num)
         {
             string oddNumbers = string.Empty;
@@ -51,6 +51,11 @@
             return oddNumbers.TrimEnd(',', ' ');
         }
 
+        /// <summary>
+        /// Возвращает список нечетных чисел от 1 до указанного числа
+        /// </summary>
+        /// <param name="num">Верхняя граница диапазона</param>
+        /// <returns>Список целых нечетных чисел</returns>
         static List<int> GetListOddNumbers(int num)
         {
             var oddNumbers = new List<int>();
@@ -63,6 +68,12 @@
             return oddNumbers;
         }
 
+        /// <summary>
+        /// Возвращает двумерную структуру, представляющую заполненный квадрат.
+        /// </summary>
+        /// <param name="size">Размер стороны квадрата</param>
+        /// <param name="symbol">Символ, которым будет заполнен квадрат (по умолчанию "X")</param>
+        /// <returns>Список списков строк, образующий квадрат.</returns>
         static List<List<string>> GetSquare(int size, string symbol = "X")
         {
             List<List<string>> square = new List<List<string>>();
@@ -82,6 +93,12 @@
             return square;
         }
 
+        /// <summary>
+        /// Возвращает строковое представление пустого квадрата (только рамка).
+        /// </summary>
+        /// <param name="num">Размер стороны квадрата</param>
+        /// <param name="symbol">Символ для отрисовки рамки (по умолчанию "X")</param>
+        /// <returns>Строка, содержащая рисунок пустого квадрата</returns>
         static string GetEmptySquare(int num, string symbol = "X")
         {
             string square = string.Empty;
@@ -100,6 +117,12 @@
             return square;
         }
 
+        /// <summary>
+        /// Проверяет, содержится ли искомое слово в строке как подпоследовательность (символы идут в нужном порядке, но могут быть разделены другими символами).
+        /// </summary>
+        /// <param name="inputWord">Входная строка для проверки</param>
+        /// <param name="target">Искомое слово (по умолчанию "hello").</param>
+        /// <returns>True, если слово можно составить, иначе False.</returns>
         static bool GetWord(string inputWord, string target = "hello")
         {
             int targetIndex = 0; // Индекс для target
