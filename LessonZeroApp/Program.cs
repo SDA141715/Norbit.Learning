@@ -27,7 +27,7 @@
             Console.Write("Input string: ");
             string s = Console.ReadLine();
 
-            if (GetWord(s))
+            if (IsWord(s))
                 Console.WriteLine("YES");
             else
                 Console.WriteLine("NO");
@@ -123,7 +123,7 @@
         /// <param name="inputWord">Входная строка для проверки</param>
         /// <param name="target">Искомое слово (по умолчанию "hello").</param>
         /// <returns>True, если слово можно составить, иначе False.</returns>
-        static bool GetWord(string inputWord, string target = "hello")
+        static bool IsWord(string inputWord, string target = "hello")
         {
             int targetIndex = 0; // Индекс для target
             int inputIndex = 0;  // Индекс для входной строки
