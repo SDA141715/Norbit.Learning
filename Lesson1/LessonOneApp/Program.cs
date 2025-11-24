@@ -1,4 +1,6 @@
-﻿namespace LessonOneApp
+﻿using CalculatorLibrary;
+
+namespace LessonOneApp
 {
     internal class Program
     {
@@ -6,7 +8,7 @@
         {
             Console.WriteLine("Hello, World!");
 
-            Console.WriteLine(MathCalculator)
+            Console.WriteLine(MathCalculator.Add(22.0, 24.0));
         }
     }
 }

@@ -27,13 +27,18 @@
             Console.Write("Input string: ");
             string s = Console.ReadLine();
 
-            if (GetHello(s))
+            if (GetWord(s))
                 Console.WriteLine("YES");
             else
                 Console.WriteLine("NO");
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
         static string GetStringOddNumbers(int num)
         {
             string oddNumbers = string.Empty;
@@ -58,7 +63,7 @@
             return oddNumbers;
         }
 
-        static List<List<string>> GetSquare(int size)
+        static List<List<string>> GetSquare(int size, string symbol = "X")
         {
             List<List<string>> square = new List<List<string>>();
 
@@ -68,7 +73,7 @@
 
                 for (int j = 0; j < size; j++)
                 {
-                    rowSquare.Add("X");
+                    rowSquare.Add(symbol);
                 }
 
                 square.Add(rowSquare);
@@ -77,28 +82,27 @@
             return square;
         }
 
-        static string GetEmptySquare(int num)
+        static string GetEmptySquare(int num, string symbol = "X")
         {
             string square = string.Empty;
 
-            square = new string('X', num);// Создаем полную строку
+            square = new string(symbol[0], num);// Создаем полную строку
             square += "\n";
             // Создаем строки с пробелами
             for (int i = num; i < num * (num - 1); i++)
             {
-                if (i % num == 0) square += 'X';
-                else if ((i + 1) % num == 0) square += "X\n";
+                if (i % num == 0) square += symbol;
+                else if ((i + 1) % num == 0) square += $"{symbol}\n";
                 else square += ' ';
             }
-            square += new string('X', num);
+            square += new string(symbol[0], num);
 
             return square;
         }
 
-        static bool GetHello(string inputWord)
+        static bool GetWord(string inputWord, string target = "hello")
         {
-            string target = "hello";
-            int targetIndex = 0; // Индекс для hello
+            int targetIndex = 0; // Индекс для target
             int inputIndex = 0;  // Индекс для входной строки
 
             while (inputIndex < inputWord.Length && targetIndex < target.Length)
