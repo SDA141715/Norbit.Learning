@@ -10,6 +10,10 @@ namespace LessonTwoApp
             int num = int.Parse(Console.ReadLine());
 
             Console.WriteLine(GetDiamond(num));
+
+            Console.WriteLine(GetTriangle(num));
+
+            Console.WriteLine(GetArrow(num));
         }
 
         /// <summary>
