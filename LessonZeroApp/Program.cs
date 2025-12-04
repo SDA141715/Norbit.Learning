@@ -138,5 +138,45 @@
             return targetIndex == target.Length;
         }
 
+
+        class File
+        { 
+            public string name;
+            public string path;
+            public int size;
+
+            public int GetSize()
+            {
+                return size;
+            }
+        }
+
+        class Directory
+        {
+            public string name;
+            public string path;
+
+            public List<File> files;
+            public List<Directory> dirs;
+            public int GetSize()
+            {
+                var totalSize = 0;
+
+                foreach(File file in files)
+                {
+                    totalSize += file.GetSize();
+                }
+
+                foreach (Directory dir in dirs)
+                {
+                    totalSize += dir.GetSize();
+                }
+
+                return totalSize;
+            }
+        }
+
+
+
     }
 }

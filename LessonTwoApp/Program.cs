@@ -9,6 +9,8 @@ namespace LessonTwoApp
             Console.Write("Input number: ");
             int num = int.Parse(Console.ReadLine());
 
+            var diamond = GetDiamond;
+
             Console.WriteLine(GetDiamond(num));
 
             Console.WriteLine(GetTriangle(num));
@@ -120,7 +122,7 @@ namespace LessonTwoApp
         }
 
         /// <summary>
-        /// Формирует строку, содержащую рисунок стрелки
+        /// Формирует стрелку ввиде строки из заданного символа
         /// </summary>
         /// <param name="n">Высота стрелки (должно быть нечётным числом)</param>
         /// <param name="symbol">Символ для отрисовки</param>
