@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOPStoreApp", "OOPStoreApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorTest", "Lesson1\CalculatorTest\CalculatorTest.csproj", "{C1C7D9EF-2C42-4FC2-B7C6-E48650C79E1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsWordTest", "IsWordTest\IsWordTest.csproj", "{69111854-DDE2-4AFA-9E87-71387AB7CEBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{C1C7D9EF-2C42-4FC2-B7C6-E48650C79E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1C7D9EF-2C42-4FC2-B7C6-E48650C79E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1C7D9EF-2C42-4FC2-B7C6-E48650C79E1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69111854-DDE2-4AFA-9E87-71387AB7CEBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69111854-DDE2-4AFA-9E87-71387AB7CEBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69111854-DDE2-4AFA-9E87-71387AB7CEBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69111854-DDE2-4AFA-9E87-71387AB7CEBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

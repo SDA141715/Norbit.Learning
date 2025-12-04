@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp6
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -118,12 +118,11 @@
         }
 
         /// <summary>
-        /// Проверяет, содержится ли искомое слово в строке как подпоследовательность (символы идут в нужном порядке, но могут быть разделены другими символами).
-        /// </summary>
+        /// Проверяет, содержится ли искомое слово в строке как подпоследовательность
         /// <param name="inputWord">Входная строка для проверки</param>
         /// <param name="target">Искомое слово (по умолчанию "hello").</param>
         /// <returns>True, если слово можно составить, иначе False.</returns>
-        static bool IsWord(string inputWord, string target = "hello")
+        public static bool IsWord(string inputWord, string target = "hello")
         {
             int targetIndex = 0; // Индекс для target
             int inputIndex = 0;  // Индекс для входной строки
